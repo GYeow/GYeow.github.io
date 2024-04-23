@@ -60,6 +60,14 @@ img {
   max-width: 90vw;
 }
 
+.highlight {
+  color: var(--global-theme-color);
+}
+span.highlight {
+  font-weight: normal;
+}
+
+
 blockquote {
   background: var(--global-bg-color);
   border-left: 5px solid var(--global-theme-color);
@@ -382,7 +390,7 @@ ul.task-list input[type="checkbox"] {
   text-align: center;
 
   .contact-icons {
-    font-size: 4rem;
+    font-size: 2rem;
 
     a {
       i::before {
