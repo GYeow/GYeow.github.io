@@ -61,10 +61,8 @@ img {
 }
 
 .highlight {
-  color: var(--global-theme-color);
-}
-span.highlight {
-  font-weight: normal;
+  // color: var(--global-theme-color);
+  font-weight: 500;
 }
 
 
@@ -390,7 +388,7 @@ ul.task-list input[type="checkbox"] {
   text-align: center;
 
   .contact-icons {
-    font-size: 2rem;
+    font-size: 3rem;
 
     a {
       i::before {

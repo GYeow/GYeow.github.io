@@ -7,14 +7,12 @@
   "education": [
     {
       "institution": "University of California, Riverside",
-      "url": "https://www1.cs.ucr.edu/",
       "area": "Vision-Language Models, Efficient Transformer",
       "studyType": "Ph.D. in Computer Science",
       "startDate": "2023"
     },
     {
       "institution": "University of California, Riverside",
-      "url": "https://www.cen.ucr.edu/",
       "area": "Hawkes Processes",
       "studyType": "M.S. in Computer Engineering",
       "startDate": "2021",
@@ -22,6 +20,16 @@
     }
   ],
   "experience": [
+    {
+      "name": "University of California, Riverside",
+      "position": "Teaching Assistant",
+      "startDate": "2023",
+      "endDate": "2023",
+      "highlights": [
+        "CS 224 (Fundamentals of Machine Learning): Winter 2023",
+        "CS/EE 228 (Deep Learning): Spring 2023"
+      ]
+    },
     {
       "name": "iFLYTEK Co., Ltd",
       "position": "Software Engineer",
