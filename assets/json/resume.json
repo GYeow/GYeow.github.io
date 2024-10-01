@@ -21,12 +21,18 @@
   ],
   "experience": [
     {
+      "name": "NEC Labs America",
+      "position": "Research Intern",
+      "startDate": "2024-06",
+      "endDate": "2024-09",
+      "summary": "Enhanced video reasoning for autonomous driving by integrating LLMs, VLMs, and other computer vision models."
+    },
+    {
       "name": "University of California, Riverside",
       "position": "Teaching Assistant",
       "startDate": "2023",
-      "endDate": "2023",
       "highlights": [
-        "CS 224 (Foundations of Machine Learning): Winter 2023",
+        "CS 224 (Foundations of Machine Learning): Winter 2023, Fall 2024",
         "CS/EE 228 (Deep Learning): Spring 2023"
       ]
     },
@@ -48,6 +54,10 @@
     }
   ],
   "awards": [
+    {
+      "title": "Member, 𝚻𝚩𝚷",
+      "date": "2023 - PRESENT"
+    },
     {
       "title": "Dean's Distinguished Fellowship Award",
       "date": "2023"
@@ -71,10 +81,24 @@
       "endDate": "2022"
     }
   ],
+  "certificates": [
+    {
+      "name": "Certified Personal Trainer (CPT)",
+      "issuer": "National Academy of Sports Medicine",
+      "url": "https://credentials.nasm.org/19933579-1b12-4028-972b-849b8e5a2732",
+      "date": "2023-12"
+    },
+    {
+      "name": "Deep Learning Specialization",
+      "issuer": "Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/J2CQYZE4EHV3",
+      "date": "2023-04"
+    }
+  ],
   "languages": [
     {
       "language": "Mandarin",
-      "fluency": "Native speaker",
+      "fluency": "Native Speaker",
       "icon": ""
     },
     {
