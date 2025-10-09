@@ -81,20 +81,20 @@
       "endDate": "2022"
     }
   ],
-  "certificates": [
-    {
-      "name": "Certified Personal Trainer (CPT)",
-      "issuer": "National Academy of Sports Medicine",
-      "url": "https://credentials.nasm.org/19933579-1b12-4028-972b-849b8e5a2732",
-      "date": "2023-12"
-    },
-    {
-      "name": "Deep Learning Specialization",
-      "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/J2CQYZE4EHV3",
-      "date": "2023-04"
-    }
-  ],
+  // "certificates": [
+  //   {
+  //     "name": "Certified Personal Trainer (CPT)",
+  //     "issuer": "National Academy of Sports Medicine",
+  //     "url": "https://credentials.nasm.org/19933579-1b12-4028-972b-849b8e5a2732",
+  //     "date": "2023-12"
+  //   },
+  //   {
+  //     "name": "Deep Learning Specialization",
+  //     "issuer": "Coursera",
+  //     "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/J2CQYZE4EHV3",
+  //     "date": "2023-04"
+  //   }
+  // ],
   "languages": [
     {
       "language": "Mandarin",
