@@ -18,8 +18,8 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I'm currently pursuing my doctorate in Computer Science at the University of California, Riverside, where I have the privilege of being advised by Professors [ Christian R. Shelton](https://www.cs.ucr.edu/~cshelton/) and [ Amit K. Roy-Chowdhury](https://vcg.ece.ucr.edu/amit).
+I'm currently pursuing my doctorate in Computer Science at the [University of California, Riverside](https://www.ucr.edu/), where I have the privilege of being advised by Professors [Amit K. Roy-Chowdhury](https://vcg.ece.ucr.edu/amit) and [Christian R. Shelton](https://www.cs.ucr.edu/~cshelton/).
 
-My research interests lie in the captivating realm of vision-language models and dynamic networks, with recent work proposing an efficient transformer encoder design for Mask2Former-style models. This innovative approach optimally selects subnetworks based on the input images. Moreover, it extends beyond segmentation to detection tasks and can be tailored to various computational budgets.
+My research focuses on visual understanding and reasoning, leveraging large language models to bridge low-level perception with high-level semantic inference. I study how structured representations of visual data can enable language-driven reasoning over complex, temporally rich environments, with an emphasis on grounding, abstraction, and generalization beyond static recognition.
 
-When I'm not immersed in academia, I enjoy spending time with my two beloved cats, pursuing my passion for quirky neo-deconstructivist fashion design, and spreading fitness joy as a NASM certified personal trainer.
+Outside of research, I enjoy spending time with my two cats, experimenting with neo-deconstructivist fashion design, and staying active as a NASM-certified personal trainer.

@@ -110,7 +110,7 @@ contact_note: >
 
 # For Google Analytics, see https://support.google.com/analytics/answer/10447272?hl=en&ref_topic=14088998&sjid=5129943941510317771-SA#zippy=%2Cgoogle-sites
 # and follow the instructions for Google Sites. You will need to create a Google Analytics property and copy the Google tag ID.
-google_analytics: # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
+google_analytics: G-3SPN1CTF5C # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
 cronitor_analytics: # cronitor RUM analytics site ID (format: XXXXXXXXX)
 
 # For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
@@ -219,10 +219,12 @@ exclude:
   - package-lock.json
   - _pages/about_einstein.md
   - _pages/blog.md
+  - _posts/*.md
   # - _pages/cv.md
   - _pages/dropdown.md
   # - _pages/publications.md
   - _pages/projects.md
+  - _projects/*.md
   - _pages/profiles.md
   - _pages/repositories.md
   - purgecss.config.js
