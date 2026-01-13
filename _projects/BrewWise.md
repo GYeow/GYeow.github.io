@@ -12,7 +12,13 @@ Specialty coffee beans have unique extraction needs depending on their origin an
 
 ---
 
-## Demo
+## Showcase
+
+### Intro
+
+{% include video.liquid path="https://github.com/user-attachments/assets/9d707a0b-9c71-403e-b06c-8ffd8cc4737d" class="img-fluid rounded z-depth-1 w-100" controls=true autoplay=false muted=false as_video=true %}
+
+### Quick Demo
 
 {% include video.liquid path="https://github.com/user-attachments/assets/d1990122-2dea-4fd7-b5b5-8b1560743260" class="img-fluid rounded z-depth-1 w-100" controls=true autoplay=false muted=false as_video=true %}
 
