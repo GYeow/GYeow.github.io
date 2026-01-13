@@ -1,7 +1,7 @@
 {% assign extension = include.path | split: '.' | last %}
 
 <figure>
-  {% if extension == 'mp4' or extension == 'webm' or extension == 'ogg' %}
+  {% if extension == 'mp4' or extension == 'webm' or extension == 'ogg' or include.as_video %}
     <video
       src="{% if include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}"
       {% if include.class %}
@@ -9,13 +9,9 @@
       {% endif %}
       {% if include.width %}
         width="{{ include.width }}"
-      {% else %}
-        width="auto"
       {% endif %}
       {% if include.height %}
         height="{{ include.height }}"
-      {% else %}
-        height="auto"
       {% endif %}
       {% if include['min-width'] %}
         min-width="{{ include.min-width }}"
@@ -63,13 +59,9 @@
       allowfullscreen
       {% if include.width %}
         width="{{ include.width }}"
-      {% else %}
-        width="auto"
       {% endif %}
       {% if include.height %}
         height="{{ include.height }}"
-      {% else %}
-        height="auto"
       {% endif %}
       {% if include['min-width'] %}
         min-width="{{ include.min-width }}"

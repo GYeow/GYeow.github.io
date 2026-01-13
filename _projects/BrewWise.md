@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Brew Wise
-description: A Feedback-Driven Precision Brewing Consultant
+description: A Feedback-Driven Brewing Consultant
 img: assets/img/brew_wise/workflow.png
 # redirect: https://brewwise.ai
 importance: 1
@@ -10,20 +10,26 @@ category: fun
 
 Specialty coffee beans have unique extraction needs depending on their origin and processing, yet many home enthusiasts are unfamiliar with how to dial in brewing parameters and strategy. [BrewWise](https://github.com/GYeow/BrewWiseMini) addresses this by treating brewing as a dynamic optimization problem, using AI to adapt brewing process and align expected flavor with the actual sensory experience.
 
+---
+
+## Demo
+
+{% include video.liquid path="https://github.com/user-attachments/assets/d1990122-2dea-4fd7-b5b5-8b1560743260" class="img-fluid rounded z-depth-1 w-100" controls=true autoplay=false muted=false as_video=true %}
+
 (read more about <a href="https://github.com/GYeow/BrewWiseMini">BrewWise</a>)
+
+---
+
+## System Workflow
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/brew_wise/workflow.png" title="Workflow image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/brew_wise/workflow.png" title="Workflow image" class="img-fluid rounded z-depth-1 mx-auto d-block" max-width="60%" %}
     </div>
 </div>
 <div class="caption">
     The BrewWise Workflow
 </div>
-
----
-
-## System Workflow
 
 1.  **Semantic Parsing (VLM)**:
     The system utilizes VLM to parse unstructured visual data from coffee packaging, extracting key variables such as Origin, Processing Method (e.g., Washed, Natural), Roast Level, and Sensory Notes into a structured JSON format.
