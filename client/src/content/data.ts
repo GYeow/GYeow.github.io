@@ -14,6 +14,7 @@ export interface Publication {
     venue: string;
     year: number;
     link?: string;
+    pdf?: string;
     abstract?: string;
     selected: boolean;
 }

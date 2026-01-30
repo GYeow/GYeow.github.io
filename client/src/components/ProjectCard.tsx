@@ -31,17 +31,8 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors opacity-0 group-hover:opacity-100" />
         </div>
 
-        {/* Description that expands on hover */}
         <div className="relative mt-2 text-sm text-muted-foreground leading-relaxed flex-grow">
-          {/* Default clamped view */}
-          <p className="line-clamp-3 group-hover:hidden transition-all duration-300">
-            {project.description}
-          </p>
-          {/* Full view on hover - absolute allows it to overlay without breaking layout if needed, 
-              but actually simpler to just replace: line-clamp-none on hover.
-              However, line-clamp transition is tricky. 
-              Let's try a simpler approach: toggle clamp class. */}
-          <p className="hidden group-hover:block animate-in fade-in duration-300">
+          <p className="line-clamp-4">
             {project.description}
           </p>
         </div>

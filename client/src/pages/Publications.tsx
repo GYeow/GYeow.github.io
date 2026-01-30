@@ -49,7 +49,18 @@ export default function Publications() {
               <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-background border-2 border-border group-hover:border-primary transition-colors" />
 
               <h2 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-                {pub.title}
+                {pub.link || pub.pdf ? (
+                  <a
+                    href={pub.link || pub.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    {pub.title}
+                  </a>
+                ) : (
+                  pub.title
+                )}
               </h2>
 
               <div className="text-muted-foreground mb-2 font-light">
@@ -57,7 +68,7 @@ export default function Publications() {
               </div>
 
               <div className="flex items-center gap-3 text-sm">
-                <span className="font-mono font-medium text-primary bg-primary/5 px-2 py-0.5 rounded">
+                <span className="font-mono font-bold text-primary bg-primary/5 px-2 py-0.5 rounded">
                   {pub.venue} {pub.year}
                 </span>
 

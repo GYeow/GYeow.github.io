@@ -135,7 +135,7 @@ export default function About() {
                     <AuthorList authors={pub.authors} />
                   </div>
                   <div className="flex gap-4 mt-3 text-sm">
-                    <span className="font-mono bg-primary/5 text-primary px-3 py-1 rounded-full border border-primary/20">
+                    <span className="font-mono font-bold text-primary bg-primary/5 px-2 py-0.5 rounded-full border border-primary/20">
                       {pub.venue} {pub.year}
                     </span>
                     {(pub.pdf || pub.link) && (
