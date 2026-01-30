@@ -33,9 +33,9 @@ Error generating stack: `+y.message+`
 
 - **Teaching Assistant**
   University of California, Riverside | 2023-2024
-  CS 224 (Foundations of Machine Learning): Winter 2023, Fall 2024
+  CS 224: Foundations of Machine Learning (Winter 2023, Fall 2024)
 
-  CS/EE 228 (Deep Learning): Spring 2023
+  CS/EE 228: Deep Learning (Spring 2023)
 
 - **Software Engineer**
   iFLYTEK Co., Ltd | 2016 - 2018
@@ -51,10 +51,7 @@ Error generating stack: `+y.message+`
 ## Service
 
 - **Reviewer**
-  European Conference on Computer Vision (ECCV)
-  Conference on Computer Vision and Pattern Recognition (CVPR 2026)
-  International Conference on Computer Vision (ICCV 2025 ADFM Workshop)
-  Association for the Advancement of Artificial Intelligence (AAAI 2025 SEAS Workshop)
+  ECCV, CVPR (2026), ICCV (2025 ADFM Workshop), AAAI (2025 SEAS Workshop)
 
 - **Peer Mentor**
   University of California, Riverside | 2022 - 2023
