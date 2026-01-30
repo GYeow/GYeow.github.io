@@ -36,12 +36,12 @@ export default function About() {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="flex flex-wrap gap-4 pt-4"
           >
-            <Link href="/publications" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all hover:translate-x-1">
-              View Publications <ArrowRight className="w-4 h-4" />
+            <Link href="/projects" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all hover:translate-x-1">
+              View Projects <ArrowRight className="w-4 h-4" />
             </Link>
 
-            <Link href="/projects" className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground border border-border rounded-lg font-medium hover:bg-secondary/80 transition-all">
-              View Projects <ArrowRight className="w-4 h-4" />
+            <Link href="/publications" className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground border border-border rounded-lg font-medium hover:bg-secondary/80 transition-all">
+              View Publications <ArrowRight className="w-4 h-4" />
             </Link>
 
             {/* <Link href="/cv" className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground border border-border rounded-lg font-medium hover:bg-secondary/80 transition-all">

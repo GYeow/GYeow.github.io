@@ -65,7 +65,7 @@ export const publications: Publication[] = [
         year: 2025,
         link: "https://arxiv.org/abs/2511.19066",
         pdf: "https://arxiv.org/pdf/2511.19066",
-        selected: true
+        selected: false
     }
 ];
 
