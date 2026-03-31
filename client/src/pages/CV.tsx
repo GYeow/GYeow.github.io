@@ -11,7 +11,7 @@ import { parseCVMarkdown } from "@/lib/markdownUtils";
 import { publications } from "@/content/data";
 
 export default function CV() {
-    const { intro, education, experience, service, awards, patents } = useMemo(() => parseCVMarkdown(cvContent), []);
+    const { intro, education, experience, service, awards, patents, volunteer } = useMemo(() => parseCVMarkdown(cvContent), []);
 
     return (
         <Layout>
@@ -112,20 +112,93 @@ export default function CV() {
 
                     <Separator />
 
+                    {/* Publications */}
+                    {publications.length > 0 && (
+                        <>
+                            <section className="space-y-6">
+                                <h2 className="text-2xl font-serif font-semibold">Publications</h2>
+                                <ul className="space-y-6 pl-2">
+                                    {publications.map((pub, index) => (
+                                        <motion.li
+                                            key={pub.id}
+                                            initial={{ opacity: 0, x: -20 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ delay: index * 0.1 + 0.4 }}
+                                            className="leading-relaxed text-lg"
+                                        >
+                                            <span className="text-muted-foreground/90">
+                                                <AuthorList authors={pub.authors} />.
+                                            </span>
+                                            <span className="font-serif font-medium mx-1.5 text-foreground/90">
+                                                {pub.link ? (
+                                                    <a href={pub.link} target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:underline underline-offset-4 transition-colors">
+                                                        {pub.title}
+                                                    </a>
+                                                ) : (
+                                                    pub.title
+                                                )}
+                                            </span>
+                                            <span className="text-sm font-mono text-muted-foreground">
+                                                {pub.venue}, {pub.year}.
+                                            </span>
+                                        </motion.li>
+                                    ))}
+                                </ul>
+                            </section>
+                            <Separator />
+                        </>
+                    )}
+
+                    {/* Patents */}
+                    {patents.length > 0 && (
+                        <>
+                            <section className="space-y-6">
+                                <h2 className="text-2xl font-serif font-semibold">Patents</h2>
+                                <ul className="space-y-6 pl-2">
+                                    {patents.map((patent, index) => (
+                                        <motion.li
+                                            key={index}
+                                            initial={{ opacity: 0, x: -20 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ delay: index * 0.1 + 0.5 }}
+                                            className="leading-relaxed text-lg"
+                                        >
+                                            <span className="text-muted-foreground/90">
+                                                <AuthorList authors={patent.authors} />.
+                                            </span>
+                                            <span className="font-serif font-medium mx-1.5 text-foreground/90">
+                                                {patent.url ? (
+                                                    <a href={patent.url} target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:underline underline-offset-4 transition-colors">
+                                                        {patent.title}
+                                                    </a>
+                                                ) : (
+                                                    patent.title
+                                                )}
+                                            </span>
+                                            <span className="text-sm font-mono text-muted-foreground">
+                                                {patent.number}
+                                            </span>
+                                        </motion.li>
+                                    ))}
+                                </ul>
+                            </section>
+                            <Separator />
+                        </>
+                    )}
+
+
                     {/* Service */}
                     {service.length > 0 && (
                         <>
                             <section className="space-y-8">
-                                <h2 className="text-2xl font-serif font-semibold flex items-center gap-3">
-                                    Service
-                                </h2>
+                                <h2 className="text-2xl font-serif font-semibold">Service</h2>
                                 <div className="space-y-10">
                                     {service.map((item, index) => (
                                         <motion.div
                                             key={index}
                                             initial={{ opacity: 0, x: -20 }}
                                             animate={{ opacity: 1, x: 0 }}
-                                            transition={{ delay: index * 0.1 + 0.5 }}
+                                            transition={{ delay: index * 0.1 + 0.7 }}
                                             className="group relative pl-8 border-l-2 border-border/50 hover:border-primary/50 transition-colors"
                                         >
                                             <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-background border-2 border-muted-foreground group-hover:border-primary transition-colors" />
@@ -162,101 +235,68 @@ export default function CV() {
                         </>
                     )}
 
-                    {/* Publications */}
-                    {publications.length > 0 && (
+                    {/* Volunteer */}
+                    {volunteer.length > 0 && (
                         <>
-                            <section className="space-y-6">
-                                <h2 className="text-2xl font-serif font-semibold">Publications</h2>
-                                <ul className="space-y-6 pl-2">
-                                    {publications.map((pub, index) => (
-                                        <motion.li
-                                            key={pub.id}
-                                            initial={{ opacity: 0, x: -20 }}
-                                            animate={{ opacity: 1, x: 0 }}
-                                            transition={{ delay: index * 0.1 + 0.6 }}
-                                            className="leading-relaxed text-lg"
-                                        >
-                                            <span className="text-muted-foreground/90">
-                                                <AuthorList authors={pub.authors} />.
-                                            </span>
-                                            <span className="font-serif font-medium mx-1.5 text-foreground/90">
-                                                {pub.link ? (
-                                                    <a href={pub.link} target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:underline underline-offset-4 transition-colors">
-                                                        {pub.title}
-                                                    </a>
-                                                ) : (
-                                                    `"${pub.title}"`
+                        <section className="space-y-8">
+                            <h2 className="text-2xl font-serif font-semibold">Volunteer</h2>
+                            <div className="space-y-10">
+                                {volunteer.map((item, index) => (
+                                    <motion.div
+                                        key={index}
+                                        initial={{ opacity: 0, x: -20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: index * 0.1 + 0.8 }}
+                                        className="group relative pl-8 border-l-2 border-border/50 hover:border-primary/50 transition-colors"
+                                    >
+                                        <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-background border-2 border-muted-foreground group-hover:border-primary transition-colors" />
+                                        <div className="space-y-2">
+                                            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                                                <h3 className="text-xl font-medium">{item.role}</h3>
+                                                {item.year && (
+                                                    <span className="text-sm font-mono text-muted-foreground bg-muted px-2 py-1 rounded">{item.year}</span>
                                                 )}
-                                            </span>
-                                            <span className="text-sm font-mono text-muted-foreground">
-                                                {pub.venue}, {pub.year}.
-                                            </span>
-                                        </motion.li>
-                                    ))}
-                                </ul>
-                            </section>
-                            <Separator />
+                                            </div>
+                                            {item.company && (
+                                                <div className="text-lg text-primary/80">{item.company}</div>
+                                            )}
+                                            <p className="text-muted-foreground leading-relaxed pt-2 whitespace-pre-line">{item.description}</p>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </section>
+
+                        <Separator />
                         </>
                     )}
 
-                    {/* Patents */}
-                    {patents.length > 0 && (
-                        <>
-                            <section className="space-y-6">
-                                <h2 className="text-2xl font-serif font-semibold">Patents</h2>
-                                <ul className="space-y-6 pl-2">
-                                    {patents.map((patent, index) => (
-                                        <motion.li
-                                            key={index}
-                                            initial={{ opacity: 0, x: -20 }}
-                                            animate={{ opacity: 1, x: 0 }}
-                                            transition={{ delay: index * 0.1 + 0.6 }}
-                                            className="leading-relaxed text-lg"
-                                        >
-                                            <span className="text-muted-foreground/90">
-                                                <AuthorList authors={patent.authors} />.
-                                            </span>
-                                            <span className="font-serif font-medium mx-1.5 text-foreground/90">
-                                                {patent.url ? (
-                                                    <a href={patent.url} target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:underline underline-offset-4 transition-colors">
-                                                        {patent.title}
-                                                    </a>
-                                                ) : (
-                                                    patent.title
-                                                )}
-                                            </span>
-                                            <span className="text-sm font-mono text-muted-foreground">
-                                                {patent.number}
-                                            </span>
-                                        </motion.li>
-                                    ))}
-                                </ul>
-                            </section>
-                            <Separator />
-                        </>
-                    )}
 
                     {/* Awards */}
-                    <section className="space-y-6">
-                        <h2 className="text-2xl font-serif font-semibold">Awards & Honors</h2>
-                        <div className="grid gap-4 sm:grid-cols-2">
-                            {awards.map((award, index) => (
-                                <motion.div
-                                    key={index}
-                                    initial={{ opacity: 0, scale: 0.95 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ delay: index * 0.1 + 0.7 }}
-                                    className="p-4 rounded-xl bg-card border border-border/50 hover:border-primary/20 transition-colors"
-                                >
-                                    <h3 className="font-medium text-lg mb-1">{award.title}</h3>
-                                    <div className="flex items-center justify-between text-sm text-muted-foreground">
-                                        <span>{award.organization}</span>
-                                        <Badge variant="secondary" className="font-mono text-xs whitespace-nowrap">{award.year}</Badge>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </section>
+                    {awards.length > 0 && (
+                        <>
+                            <section className="space-y-6">
+                                <h2 className="text-2xl font-serif font-semibold">Awards & Honors</h2>
+                                <div className="grid gap-4 sm:grid-cols-2">
+                                    {awards.map((award, index) => (
+                                        <motion.div
+                                            key={index}
+                                            initial={{ opacity: 0, scale: 0.95 }}
+                                            animate={{ opacity: 1, scale: 1 }}
+                                            transition={{ delay: index * 0.1 + 0.6 }}
+                                            className="p-4 rounded-xl bg-card border border-border/50 hover:border-primary/20 transition-colors"
+                                        >
+                                            <h3 className="font-medium text-lg mb-1">{award.title}</h3>
+                                            <div className="flex items-center justify-between text-sm text-muted-foreground">
+                                                <span>{award.organization}</span>
+                                                <Badge variant="secondary" className="font-mono text-xs whitespace-nowrap">{award.year}</Badge>
+                                            </div>
+                                        </motion.div>
+                                    ))}
+                                </div>
+                            </section>
+                        </>
+                    )}
                 </motion.div>
             </div>
         </Layout>

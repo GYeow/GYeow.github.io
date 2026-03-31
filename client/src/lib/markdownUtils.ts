@@ -2,9 +2,18 @@ export interface CVSection {
     intro: string;
     education: EducationItem[];
     experience: ExperienceItem[];
-    service: ExperienceItem[];
-    awards: AwardItem[];
+    publications: PublicationItem[];
     patents: PatentItem[];
+    awards: AwardItem[];
+    service: ExperienceItem[];
+    volunteer: ExperienceItem[];
+}
+
+export interface PublicationItem {
+    authors: string;
+    title: string;
+    url?: string;
+    venue: string;
 }
 
 export interface EducationItem {
@@ -41,9 +50,11 @@ export function parseCVMarkdown(content: string): CVSection {
         intro: "",
         education: [],
         experience: [],
-        service: [],
+        publications: [],
+        patents: [],
         awards: [],
-        patents: []
+        service: [],
+        volunteer: []
     };
 
     // Intro is before the first header
@@ -176,6 +187,30 @@ export function parseCVMarkdown(content: string): CVSection {
                 const titleClean = title.endsWith('.') ? title.slice(0, -1) : title;
 
                 return { authors, title: titleClean, url, number: numberPart };
+            });
+        } else if (title === "publications") {
+            result.publications = parseList(body).map(item => {
+                // Format: Authors. [Title](url). Venue, Year.  or Authors. Title. Venue, Year.
+                const linkMatch = item.match(/\[([^\]]+)\]\(([^)]+)\)/);
+                const url = linkMatch ? linkMatch[2] : undefined;
+                const cleaned = item.replace(/\[([^\]]+)\]\([^)]+\)/, linkMatch ? linkMatch[1] : "");
+                const parts = cleaned.split(/\.\s+/);
+                const authors = parts[0].trim();
+                const title = linkMatch ? linkMatch[1] : (parts[1] || "").trim();
+                const venue = parts.slice(linkMatch ? 1 : 2).join(". ").trim();
+                return { authors, title, url, venue };
+            });
+        } else if (title === "volunteer") {
+            result.volunteer = parseList(body).map(item => {
+                const lines = item.split('\n').map(l => l.trim()).filter(Boolean);
+                const role = extractBold(lines[0]);
+                let company = "", year = "";
+                let descStart = 1;
+                if (lines[1] && lines[1].includes('|')) {
+                    [company, year] = lines[1].split('|').map(s => s.trim());
+                    descStart = 2;
+                }
+                return { role, company, year, description: lines.slice(descStart).join("\n") };
             });
         }
     }
