@@ -95,5 +95,6 @@ export const coauthors: Record<string, string> = {
     "Anirban Chakraborty": "https://anirbanchakraborty.github.io/",
     "Ananthram Swami": "https://www.linkedin.com/in/ananthram-swami-3a492743/",
     "Samet Oymak": "https://sota.engin.umich.edu/",
-    "Samuel Schulter": "https://samschulter.github.io/"
+    "Samuel Schulter": "https://samschulter.github.io/",
+    "Xiangyu Chang": "https://scholar.google.com/citations?user=mQh2GmoAAAAJ&hl=en"
 };

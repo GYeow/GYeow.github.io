@@ -1,7 +1,8 @@
 import { ReactNode } from "react";
 import { Navigation } from "./Navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Github, Twitter, Mail, Linkedin } from "lucide-react";
+import { Github, Mail, Linkedin } from "lucide-react";
+import { SiGooglescholar } from "react-icons/si";
 
 interface LayoutProps {
   children: ReactNode;
@@ -37,6 +38,9 @@ export function Layout({ children }: LayoutProps) {
             </a>
             <a href="mailto:myao014@ucr.edu" className="hover:text-primary transition-colors">
               <Mail className="w-6 h-6" />
+            </a>
+            <a href="https://scholar.google.com/citations?user=XBAgFd8AAAAJ" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <SiGooglescholar className="w-6 h-6" />
             </a>
           </div>
         </div>

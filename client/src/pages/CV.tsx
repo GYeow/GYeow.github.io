@@ -5,8 +5,10 @@ import { Separator } from "@/components/ui/separator";
 import { AuthorList } from "@/components/AuthorList";
 
 import { useMemo } from "react";
+import ReactMarkdown from "react-markdown";
 import cvContent from "@/content/cv.md?raw";
 import { parseCVMarkdown } from "@/lib/markdownUtils";
+import { publications } from "@/content/data";
 
 export default function CV() {
     const { intro, education, experience, service, awards, patents } = useMemo(() => parseCVMarkdown(cvContent), []);
@@ -54,7 +56,20 @@ export default function CV() {
                                         {edu.advisor && (
                                             <div className="text-sm text-muted-foreground">Advisors: {edu.advisor}</div>
                                         )}
-                                        <p className="text-muted-foreground leading-relaxed pt-2 whitespace-pre-line">{edu.description}</p>
+                                        <div className="text-muted-foreground leading-relaxed pt-2">
+                                            <ReactMarkdown
+                                                components={{
+                                                    a: ({ href, children }) => (
+                                                        <a href={href} target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:underline underline-offset-4 transition-colors">
+                                                            {children}
+                                                        </a>
+                                                    ),
+                                                    p: ({ children }) => <p className="whitespace-pre-line">{children}</p>
+                                                }}
+                                            >
+                                                {edu.description}
+                                            </ReactMarkdown>
+                                        </div>
                                     </div>
                                 </motion.div>
                             ))}
@@ -124,11 +139,61 @@ export default function CV() {
                                                 {item.company && (
                                                     <div className="text-lg text-primary/80">{item.company}</div>
                                                 )}
-                                                <p className="text-muted-foreground leading-relaxed pt-2 whitespace-pre-line">{item.description}</p>
+                                                <div className="text-muted-foreground leading-relaxed pt-2">
+                                                    <ReactMarkdown
+                                                        components={{
+                                                            a: ({ href, children }) => (
+                                                                <a href={href} target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:underline underline-offset-4 transition-colors">
+                                                                    {children}
+                                                                </a>
+                                                            ),
+                                                            p: ({ children }) => <p className="whitespace-pre-line">{children}</p>
+                                                        }}
+                                                    >
+                                                        {item.description}
+                                                    </ReactMarkdown>
+                                                </div>
                                             </div>
                                         </motion.div>
                                     ))}
                                 </div>
+                            </section>
+                            <Separator />
+                        </>
+                    )}
+
+                    {/* Publications */}
+                    {publications.length > 0 && (
+                        <>
+                            <section className="space-y-6">
+                                <h2 className="text-2xl font-serif font-semibold">Publications</h2>
+                                <ul className="space-y-6 pl-2">
+                                    {publications.map((pub, index) => (
+                                        <motion.li
+                                            key={pub.id}
+                                            initial={{ opacity: 0, x: -20 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ delay: index * 0.1 + 0.6 }}
+                                            className="leading-relaxed text-lg"
+                                        >
+                                            <span className="text-muted-foreground/90">
+                                                <AuthorList authors={pub.authors} />.
+                                            </span>
+                                            <span className="font-serif font-medium mx-1.5 text-foreground/90">
+                                                {pub.link ? (
+                                                    <a href={pub.link} target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:underline underline-offset-4 transition-colors">
+                                                        {pub.title}
+                                                    </a>
+                                                ) : (
+                                                    `"${pub.title}"`
+                                                )}
+                                            </span>
+                                            <span className="text-sm font-mono text-muted-foreground">
+                                                {pub.venue}, {pub.year}.
+                                            </span>
+                                        </motion.li>
+                                    ))}
+                                </ul>
                             </section>
                             <Separator />
                         </>
