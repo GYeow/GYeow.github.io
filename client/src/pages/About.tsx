@@ -93,8 +93,8 @@ export default function About() {
           >
             <h2 className="text-3xl font-serif font-bold text-primary mb-8 border-b border-border pb-4">News</h2>
             <div className="space-y-6">
-              {news.map((item) => (
-                <div key={item.id} className="flex gap-6 items-start">
+              {[...news].sort((a, b) => b.date.localeCompare(a.date)).map((item) => (
+                <div key={item.date} className="flex gap-6 items-start">
                   <span className="text-sm font-mono text-muted-foreground whitespace-nowrap pt-1 min-w-[100px]">{item.date}</span>
                   <div className="flex-1 text-muted-foreground text-lg">
                     <ReactMarkdown

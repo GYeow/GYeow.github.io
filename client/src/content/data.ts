@@ -20,7 +20,6 @@ export interface Publication {
 }
 
 export interface NewsItem {
-    id: number;
     date: string;
     content: string;
 }
@@ -37,6 +36,16 @@ export const projects: Project[] = [
 ];
 
 export const publications: Publication[] = [
+    {
+        id: "yao2026strive",
+        title: "Driving Video Retrieval for Complex Queries with Structured Grounding",
+        authors: ["Manyi Yao", "Sparsh Garg", "Christian R. Shelton", "Amit Roy-Chowdhury", "Abhishek Aich"],
+        venue: "Preprint",
+        year: 2026,
+        link: "https://arxiv.org/abs/2606.09109",
+        pdf: "https://arxiv.org/pdf/2606.09109",
+        selected: true
+    },
     {
         id: "Yaoetal25",
         title: "iFinder: Structured Zero-Shot Vision-Based LLM Grounding for Dash-Cam Video Reasoning",
@@ -69,16 +78,19 @@ export const publications: Publication[] = [
     }
 ];
 
+// Add new entries anywhere — they are sorted by date (newest first) at render time.
 export const news: NewsItem[] = [
     {
-        id: 1,
+        date: "2026-06-15",
+        content: "Join Amazon Alexa Edge AI - CV team as Applied Scientist Intern, mentored by [Jurijs Nazarovs](https://jurijsnazarovs.github.io/) and [Eunji Chong](https://ejcgt.github.io/) (manager: [Deb Pal](https://www.linkedin.com/in/debashish-pal-6a60377/))."
+    },
+    {
         date: "2025-09-18",
         content: "Paper on vision-based LLM grounding for dash-cam video reasoning accepted in [NeurIPS 2025](https://neurips.cc/Conferences/2025)!"
     },
     {
-        id: 2,
         date: "2024-06-24",
-        content: "Join [NEC Labs America](https://www.nec-labs.com/) as Research Intern in Media Analytics team, mentored by [Abhishek Aich](https://abhishekaich27.github.io/)."
+        content: "Join [NEC Labs America](https://www.nec-labs.com/) as Research Intern in Media Analytics team, mentored by [Abhishek Aich](https://abhishekaich27.github.io/) (manager: [Manmohan Chandraker](https://cseweb.ucsd.edu/~mkchandraker/))."
     }
 ];
 

@@ -14,6 +14,10 @@
 
 ## Experience
 
+- **Applied Scientist Intern**
+  Amazon | 2026-06 - Present
+  Researching robust person recognition under limited visual cues.
+
 - **Research Intern**
   NEC Labs America | 2024-06 - 2024-09
   Enhanced video reasoning for autonomous driving by leveraging LLMs, VLMs, and other computer vision models.
@@ -37,6 +41,8 @@
 
 ## Publications
 
+- Manyi Yao, Sparsh Garg, Christian R. Shelton, Amit Roy-Chowdhury, Abhishek Aich. [Driving Video Retrieval for Complex Queries with Structured Grounding](https://arxiv.org/abs/2606.09109). Preprint, 2026.
+
 - Manyi Yao, Bingbing Zhuang, Sparsh Garg, Amit Roy-Chowdhury, Christian R. Shelton, Manmohan Chandraker, Abhishek Aich. [iFinder: Structured Zero-Shot Vision-Based LLM Grounding for Dash-Cam Video Reasoning](https://arxiv.org/abs/2509.19552). NeurIPS, 2025.
 
 - Manyi Yao, Abhishek Aich, Yumin Suh, Amit Roy-Chowdhury, Christian R. Shelton, Manmohan Chandraker. [Efficient Transformer Encoders for Mask2Former-style models](https://arxiv.org/abs/2404.15244). WACV WVAQ, 2026.
@@ -55,7 +61,7 @@
   Conference on Computer Vision and Pattern Recognition (CVPR)
   International Conference on Computer Vision (ICCV)
   Association for the Advancement of Artificial Intelligence (AAAI)
-  IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)
+  IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)
 
 
 - **Program Committee**
@@ -65,6 +71,10 @@
 
 
 ## Volunteer
+
+- **Competition Judge**
+  [MESA Year-End Competition](https://ucrmesa.weebly.com/) | 2026 May
+  Judged hands-on engineering projects and provided feedback for K-12 STEM students.
 
 - **Peer Mentor**
   University of California, Riverside | 2022 - 2023

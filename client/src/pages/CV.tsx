@@ -210,7 +210,20 @@ export default function CV() {
                                                     )}
                                                 </div>
                                                 {item.company && (
-                                                    <div className="text-lg text-primary/80">{item.company}</div>
+                                                    <div className="text-lg text-primary/80">
+                                                        <ReactMarkdown
+                                                            components={{
+                                                                a: ({ href, children }) => (
+                                                                    <a href={href} target="_blank" rel="noopener noreferrer" className="hover:underline underline-offset-4 transition-colors">
+                                                                        {children}
+                                                                    </a>
+                                                                ),
+                                                                p: ({ children }) => <>{children}</>
+                                                            }}
+                                                        >
+                                                            {item.company}
+                                                        </ReactMarkdown>
+                                                    </div>
                                                 )}
                                                 <div className="text-muted-foreground leading-relaxed pt-2">
                                                     <ReactMarkdown
@@ -258,7 +271,20 @@ export default function CV() {
                                                 )}
                                             </div>
                                             {item.company && (
-                                                <div className="text-lg text-primary/80">{item.company}</div>
+                                                <div className="text-lg text-primary/80">
+                                                    <ReactMarkdown
+                                                        components={{
+                                                            a: ({ href, children }) => (
+                                                                <a href={href} target="_blank" rel="noopener noreferrer" className="hover:underline underline-offset-4 transition-colors">
+                                                                    {children}
+                                                                </a>
+                                                            ),
+                                                            p: ({ children }) => <>{children}</>
+                                                        }}
+                                                    >
+                                                        {item.company}
+                                                    </ReactMarkdown>
+                                                </div>
                                             )}
                                             <p className="text-muted-foreground leading-relaxed pt-2 whitespace-pre-line">{item.description}</p>
                                         </div>
