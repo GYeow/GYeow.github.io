@@ -66,7 +66,6 @@ export default {
         sans: ["Inter", "sans-serif"],
         serif: ["Playfair Display", "serif"],
         mono: ["JetBrains Mono", "monospace"],
-        cormorant: ["Cormorant Garamond", "serif"],
       },
       keyframes: {
         "accordion-down": {

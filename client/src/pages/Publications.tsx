@@ -1,7 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { publications } from "@/content/data";
 import { motion } from "framer-motion";
-import { FileText } from "lucide-react";
+import { FileText, Globe } from "lucide-react";
 import { AuthorList } from "@/components/AuthorList";
 
 export default function Publications() {
@@ -81,6 +81,18 @@ export default function Publications() {
                   >
                     <FileText className="w-3.5 h-3.5" />
                     <span>PDF</span>
+                  </a>
+                )}
+
+                {pub.project && (
+                  <a
+                    href={pub.project}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    <Globe className="w-3.5 h-3.5" />
+                    <span>Project Page</span>
                   </a>
                 )}
               </div>

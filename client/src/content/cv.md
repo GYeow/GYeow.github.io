@@ -30,6 +30,8 @@
 
   CS203: Advanced Computer Architecture (Spring 2026)
 
+  CS 171 / EE 142: Introduction to Machine Learning and Data Mining (Fall 2026)
+
 
 - **Graduate Student Researcher**
   University of California, Riverside | 2023 - Present
@@ -41,7 +43,7 @@
 
 ## Publications
 
-- Manyi Yao, Sparsh Garg, Christian R. Shelton, Amit Roy-Chowdhury, Abhishek Aich. [Driving Video Retrieval for Complex Queries with Structured Grounding](https://arxiv.org/abs/2606.09109). Preprint, 2026.
+- Manyi Yao, Sparsh Garg, Christian R. Shelton, Amit Roy-Chowdhury, Abhishek Aich. [Driving Video Retrieval for Complex Queries with Structured Grounding](https://arxiv.org/abs/2606.09109). NeurIPS, 2026.
 
 - Manyi Yao, Bingbing Zhuang, Sparsh Garg, Amit Roy-Chowdhury, Christian R. Shelton, Manmohan Chandraker, Abhishek Aich. [iFinder: Structured Zero-Shot Vision-Based LLM Grounding for Dash-Cam Video Reasoning](https://arxiv.org/abs/2509.19552). NeurIPS, 2025.
 

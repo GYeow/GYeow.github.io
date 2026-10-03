@@ -15,6 +15,7 @@ export interface Publication {
     year: number;
     link?: string;
     pdf?: string;
+    project?: string;
     abstract?: string;
     selected: boolean;
 }
@@ -40,10 +41,11 @@ export const publications: Publication[] = [
         id: "yao2026strive",
         title: "Driving Video Retrieval for Complex Queries with Structured Grounding",
         authors: ["Manyi Yao", "Sparsh Garg", "Christian R. Shelton", "Amit Roy-Chowdhury", "Abhishek Aich"],
-        venue: "Preprint",
+        venue: "NeurIPS",
         year: 2026,
         link: "https://arxiv.org/abs/2606.09109",
         pdf: "https://arxiv.org/pdf/2606.09109",
+        project: "https://gyeow.github.io/strive-d/",
         selected: true
     },
     {
@@ -81,6 +83,10 @@ export const publications: Publication[] = [
 // Add new entries anywhere — they are sorted by date (newest first) at render time.
 export const news: NewsItem[] = [
     {
+        date: "2026-09-24",
+        content: "Paper on [driving video retrieval with structured grounding](https://arxiv.org/abs/2606.09109) accepted in [NeurIPS 2026](https://neurips.cc/Conferences/2026)!"
+    },
+    {
         date: "2026-06-15",
         content: "Join Amazon Alexa Edge AI - CV team as Applied Scientist Intern, mentored by [Jurijs Nazarovs](https://jurijsnazarovs.github.io/) and [Eunji Chong](https://ejcgt.github.io/) (manager: [Deb Pal](https://www.linkedin.com/in/debashish-pal-6a60377/))."
     },
@@ -109,4 +115,14 @@ export const coauthors: Record<string, string> = {
     "Samet Oymak": "https://sota.engin.umich.edu/",
     "Samuel Schulter": "https://samschulter.github.io/",
     "Xiangyu Chang": "https://scholar.google.com/citations?user=mQh2GmoAAAAJ&hl=en"
+};
+
+// Coauthor headshots (square, ~300px) stored in client/public/coauthors/.
+// Reuse these for project pages, author lists, etc. Keys match `coauthors` above.
+export const coauthorPhotos: Record<string, string> = {
+    "Abhishek Aich": "/coauthors/abhishek-aich.jpg",           // from Google Scholar
+    "Amit Roy-Chowdhury": "/coauthors/amit-roy-chowdhury.jpg", // from vcg.engr.ucr.edu/amit
+    "Christian R. Shelton": "/coauthors/christian-shelton.jpg",// from cs.ucr.edu/~cshelton
+    "Christian Shelton": "/coauthors/christian-shelton.jpg",
+    "Sparsh Garg": "/coauthors/sparsh-garg.jpg"                // from Google Scholar
 };

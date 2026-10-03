@@ -1,6 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { motion } from "framer-motion";
-import { ArrowRight, Download, FileText } from "lucide-react";
+import { ArrowRight, Download, FileText, Globe } from "lucide-react";
 import { Link } from "wouter";
 import ReactMarkdown from "react-markdown";
 import aboutContent from "@/content/about.md?raw";
@@ -21,7 +21,7 @@ export default function About() {
           >
             <ReactMarkdown
               components={{
-                h1: ({ node, ...props }) => <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6" {...props} />,
+                h1: ({ node, ...props }) => <h1 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6" {...props} />,
                 p: ({ node, ...props }) => <p className="text-lg text-muted-foreground leading-relaxed font-light mb-6" {...props} />,
                 a: ({ node, ...props }) => <a className="font-medium text-primary underline underline-offset-4" target="_blank" rel="noopener noreferrer" {...props} />
               }}
@@ -141,6 +141,11 @@ export default function About() {
                     {(pub.pdf || pub.link) && (
                       <a href={pub.pdf || pub.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors">
                         <FileText className="w-4 h-4" /> PDF
+                      </a>
+                    )}
+                    {pub.project && (
+                      <a href={pub.project} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors">
+                        <Globe className="w-4 h-4" /> Project Page
                       </a>
                     )}
                   </div>

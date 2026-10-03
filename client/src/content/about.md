@@ -1,4 +1,4 @@
-# Researcher & Builder
+# Manyi Yao
 
 I'm currently pursuing my doctorate in Computer Science at the [University of California, Riverside](https://www.ucr.edu/), where I have the privilege of being advised by Professors [Amit K. Roy-Chowdhury](https://vcg.ece.ucr.edu/amit) and [Christian R. Shelton](https://www.cs.ucr.edu/~cshelton/).
 

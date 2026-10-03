@@ -20,7 +20,7 @@ export function Navigation() {
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-5 text-xl font-serif font-bold tracking-tight hover:opacity-70 transition-opacity">
           <img src="/favicon.png" alt="Logo" className="w-8 h-8" />
-          Manyi Yao
+          {location !== "/" && "Manyi Yao"}
         </Link>
 
         {/* Desktop Menu */}
